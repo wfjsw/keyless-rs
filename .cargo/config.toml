@@ -1,0 +1,3 @@
+[env]
+# Windows builds of aws-lc-sys need NASM; use its prebuilt objects instead.
+AWS_LC_SYS_PREBUILT_NASM = "1"

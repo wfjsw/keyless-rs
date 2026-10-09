@@ -1,0 +1,28 @@
+[package]
+name = "keyless-server"
+description = "Keyless SSL key server (gokeyless compatible)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "keyless-server"
+path = "src/bin/keyless-server.rs"
+
+[dependencies]
+keyless-protocol.workspace = true
+aws-lc-rs.workspace = true
+futures-util.workspace = true
+rustls.workspace = true
+rustls-pki-types.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tokio-rustls.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+clap = { version = "4", features = ["derive", "env"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
+rcgen.workspace = true

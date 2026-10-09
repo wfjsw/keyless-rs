@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = ["crates/keyless-protocol", "crates/keyless-server", "crates/keyless-client", "target/probe24"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "BSD-3-Clause"
+rust-version = "1.80"
+
+[workspace.dependencies]
+keyless-protocol = { path = "crates/keyless-protocol" }
+keyless-server = { path = "crates/keyless-server" }
+keyless-client = { path = "crates/keyless-client" }
+aws-lc-rs = "1.18"
+bytes = "1"
+futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
+rustls = "0.23"
+rustls-pki-types = { version = "1.15", features = ["std"] }
+thiserror = "2"
+tokio = { version = "1", features = ["net", "io-util", "rt", "rt-multi-thread", "sync", "time", "macros"] }
+tokio-rustls = "0.26"
+tokio-util = { version = "0.7", features = ["codec"] }
+tracing = "0.1"
+rcgen = { version = "0.14", default-features = false, features = ["aws_lc_rs", "pem"] }

@@ -1,0 +1,23 @@
+[package]
+name = "keyless-client"
+description = "Keyless SSL client with a rustls SigningKey backed by a remote key server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+keyless-protocol.workspace = true
+aws-lc-rs.workspace = true
+futures-util.workspace = true
+rustls.workspace = true
+rustls-pki-types.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tokio-rustls.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+keyless-server.workspace = true
+rcgen.workspace = true
